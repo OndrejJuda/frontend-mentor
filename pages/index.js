@@ -4,6 +4,7 @@ import Link from 'next/link';
 const pages = [
   { level: 'newbie', challenge: 'nft-preview-card', title: 'NFT Preview Card' },
   { level: 'newbie', challenge: 'product-preview-card', title: 'Product Preview Card' },
+  { level: 'newbie', challenge: 'interactive-rating-component', base: 'rate', title: 'Interactive Rating Component' },
 ]
 
 export default function Home() {
@@ -11,9 +12,9 @@ export default function Home() {
     <div>
       <ul className='p-4'>
         {
-          pages.map(({ level, challenge, title }) => (
+          pages.map(({ level, challenge, base, title }) => (
             <li key={`${level}-${challenge}}`}>
-              <Link href={`/${level}/${challenge}`}>{title}</Link>
+              <Link href={`/${level}/${challenge}${base ? '/rate' : ''}`}>{`> ${title}`}</Link>
             </li>
           ))
         }
