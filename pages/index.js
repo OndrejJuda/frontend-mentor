@@ -5,6 +5,7 @@ const pages = [
   { level: 'newbie', challenge: 'nft-preview-card', title: 'NFT Preview Card' },
   { level: 'newbie', challenge: 'product-preview-card', title: 'Product Preview Card' },
   { level: 'newbie', challenge: 'interactive-rating-component', base: 'rate', title: 'Interactive Rating Component' },
+  { level: 'newbie', challenge: 'faq-accordion', title: 'FAQ Accordion' },
 ]
 
 export default function Home() {
