@@ -16,21 +16,25 @@ const FAQAccordion = () => {
   return (
     <Wrapper>
       <div className='bg-gradient-to-b from-violet-400 to-violet-700 w-full h-full flex justify-center items-center'>
-        <section className='bg-white w-[350px] rounded-2xl shadow-xl flex flex-col items-center py-12 px-4 mx-8'>
-          <div className='h-20'>
-            <div className='relative -translate-y-[85%] md:hidden'>
-              <img src={assets.womanMobile.src} alt='Woman with monitor' className='w-[250px]' />
-              <img src={assets.bgMobile.src} alt='Shadow' className='absolute top-[60%]' />
+        <section className='bg-white w-[360px] md:w-[760px] rounded-2xl shadow-xl flex flex-col  md:flex-row items-center md:gap-16 py-12 md:py-16 px-4 md:px-24 mx-8 relative md:overflow-hidden'>
+            <div className='h-20 md:hidden'>
+              <img src={assets.womanMobile.src} alt='Woman with monitor' className='w-[250px] absolute -top-28 left-14' />
+              <img src={assets.bgMobile.src} alt='Shadow' className='absolute top-0 left-14' />
             </div>
+          <div className='w-[180px] hidden md:flex'>
+            <img src={assets.womanDesktop.src} alt='Woman with monitor' className='absolute top-24 -left-16 w-[360px] z-10' />
+            <img src={assets.bgDesktop.src} alt='Shadow' className='absolute -top-52 -left-[29rem] w-[800px]' />
           </div>
-          <h1 className='text-3xl font-bold mb-8'>FAQ</h1>
-          <ul>
-            {
-              FAQ.map((item, index) => (
-                <FAQItem key={index} item={item} />
-              ))
-            }
-          </ul>
+          <div className='flex flex-col items-center md:items-start md:w-[340px]'>
+            <h1 className='text-3xl font-bold mb-8'>FAQ</h1>
+            <ul>
+              {
+                FAQ.map((item, index) => (
+                  <FAQItem key={index} item={item} />
+                ))
+              }
+            </ul>
+          </div>
         </section>
       </div>
     </Wrapper>

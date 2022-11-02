@@ -7,15 +7,16 @@ const FAQItem = ({ item: { question, answer } }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <article className='border-b py-2'>
-      <div className='flex justify-between items-center gap-4'>
+    <article className='border-b py-3 flex-1'>
+      <div className='flex justify-between items-stretch gap-5'>
         <motion.h2
           variants={{
-            open: { fontWeight: 600 },
-            collapsed: { fontWeight: 'normal' }
+            open: { color: '#6862e6' },
+            collapsed: { color: 'black' }
           }}
           animate={isOpen ? 'open' : 'collapsed'}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2 }}
+          className='font-bold'
         >
           {question}
         </motion.h2>
